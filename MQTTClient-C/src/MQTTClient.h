@@ -61,8 +61,8 @@ enum returnCode { BUFFER_OVERFLOW = -2, FAILURE = -1, SUCCESS = 0 };
  *
 typedef struct Network
 {
-	int (*mqttread)(Network*, unsigned char* read_buffer, int, int);
-	int (*mqttwrite)(Network*, unsigned char* send_buffer, int, int);
+	int (*mqttread)(struct Network*, unsigned char* read_buffer, int, int);
+	int (*mqttwrite)(struct Network*, unsigned char* send_buffer, int, int);
 } Network;*/
 
 /* The Timer structure must be defined in the platform specific header,
